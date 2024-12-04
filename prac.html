@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Showcase</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Internal CSS for styling -->
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        header {
+            background-image: url("cinematic.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            height: 250px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: #007bff;
+        }
+
+        .movie-card {
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            height: 500px;
+            object-fit: cover;
+            width: auto;
+        }
+
+        .card-body {
+            background-color: white;
+            border-top: 4px solid #007bff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .categories-section .category-box {
+            padding: 40px 0;
+            background-color: #007bff;
+            color: white;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .categories-section .category-box:hover {
+            background-color: #0056b3;
+        }
+
+       
+
+        @media print {
+            nav {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            footer {
+                visibility: visible; /* Hides footer when printing */
+            }
+
+            .movie-card {
+                page-break-inside: avoid; /* Prevents breaking cards between pages */
+            }
+
+            body {
+                background: none !important; /* Hides background images */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Movie Showcase</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#movies">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newsletter">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h1>Welcome to Movie Showcase</h1>
+            <p class="lead">Discover the Best Movies from All Genres</p>
+        </div>
+    </header>
+
+    <!-- Movie Section -->
+    <section id="movies" class="movies-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Movie Card 1 -->
+                <div class="col-md-4">
+                    <div class="card movie-card">
+                        <img src="inception.jpg" class="card-img-top" alt="Movie Poster"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Inception</h5>
+                            <p class="card-text">A mind-bending thriller that blurs the line between dream and reality.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 2 -->
+                <div class="col-md-4">
+                    <div class="card movie-card">
+                        <img src="darkknight.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="card-body">
+                            <h5 class="card-title">The Dark Knight</h5>
+                            <p class="card-text">Batman faces his greatest challenge as he battles the chaotic Joker.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 3 -->
+                <div class="col-md-4">
+                    <div class="card movie-card">
+                        <img src="interstellar.jpg" class="card-img-top" alt="Movie Poster">
+                        <div class="card-body">
+                            <h5 class="card-title">Interstellar</h5>
+                            <p class="card-text">A gripping space adventure exploring the boundaries of science and love.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Categories -->
+    <section id="categories" class="categories-section py-5 bg-light">
+        <div class="container text-center">
+            <h2>Explore by Categories</h2>
+            <p>Find your favorite movies by genre</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h4>Action</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h4>Drama</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h4>Sci-Fi</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h4>Comedy</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section py-5">
+        <div class="container text-center">
+            <h2>User Testimonials</h2>
+            <p>What movie enthusiasts are saying</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Inception blew my mind. I've never seen anything like it!"</p>
+                        <footer class="blockquote-footer">Eshmeet Singh</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"The Dark Knight is the best superhero movie ever made!"</p>
+                        <footer class="blockquote-footer">Jane Smith</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Interstellar was a breathtaking journey across time and space."</p>
+                        <footer class="blockquote-footer">Michael Lee</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <div class="container">
+            <p>&copy; 2024 Movie Showcase. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="text-white mr-3">Facebook</a>
+                <a href="#" class="text-white mr-3">Twitter</a>
+                <a href="#" class="text-white">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

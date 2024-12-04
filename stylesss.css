@@ -1,0 +1,64 @@
+/* Custom Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-image: url("cinematic.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #007bff;
+}
+
+.movie-card {
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 500px;
+    object-fit: cover;
+    width: auto;
+     
+    
+}
+
+.card-body {
+    background-color: white;
+    border-top: 4px solid #007bff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.categories-section .category-box {
+    padding: 40px 0;
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.categories-section .category-box:hover {
+    background-color: #0056b3;
+}
+
+#newsletter{
+    background-image: url("cinematic.jpg");
+    background-size: cover;
+}
